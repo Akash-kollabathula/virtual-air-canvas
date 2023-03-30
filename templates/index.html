@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> VIRTUAL AIR CANVAS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static',filename='style.css')}}"> 
+    </head>
+
+<body>  
+   <form action="/files" method="GET">
+  <button id="btn1" class="button1" type="submit">Click here to view saved images</button>
+</form>
+    
+  <button id="btn2" class="button2" type="submit"><a href="/cam">Get Started</a></button>
+
+  <div class="box">
+    <span class="replies">Note</span>
+    <span class="comment">Click 'B' to exit</span>
+  </div>
+  <div class="container">
+    <img src="https://infoaryan.com/wp-content/uploads/2020/06/aircanvas.jpg" height="200px" width="200px">
+    <div class="overlay">
+     <div class="text">Virtual Air Canvas</div>
+    </div>
+  </div>
+  <div class="bubbles">
+    <img src="{{url_for('static',filename='images/bubble.png')}}">
+    <img src="{{url_for('static',filename='images/bubble.png')}}">
+    <img src="{{url_for('static',filename='images/bubble.png')}}">
+    <img src="{{url_for('static',filename='images/bubble.png')}}">
+    <img src="{{url_for('static',filename='images/bubble.png')}}">
+    <img src="{{url_for('static',filename='images/bubble.png')}}">
+    <img src="{{url_for('static',filename='images/bubble.png')}}">
+
+  
+</div>
+</body>
+
+<script type="text/javascript">
+    // document.getElementById("btn1").onclick = function () {
+    //     location.href = "www.google.com";
+    // };
+
+    // document.getElementById("btn2").onclick = function () {
+    //     location.href = "www.google.com";
+    // };
+
+</script>
+</html>

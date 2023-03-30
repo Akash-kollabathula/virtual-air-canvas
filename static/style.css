@@ -1,0 +1,246 @@
+
+body{       
+   background-image: url('https://sp-ao.shortpixel.ai/client/q_glossy,ret_img,w_640,h_360/http://infoaryan.com/wp-content/uploads/2020/06/deer-1333814_6402.jpg');
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: 100% 100%;
+   
+   }
+   
+   @keyframes example {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: violet;}
+   }
+   
+   @keyframes example1 {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:300px; top:0px;}
+    50%  {background-color:blue; left:600px; top:0px;}
+    75%  {background-color:green; left:300px; top:0px;}
+    100% {background-color:red; left:0px; top:0px;}
+   }
+   
+   .button1 {
+    background-color: #f39121;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transform:translate(30px) scale(0.9);
+    position: absolute;
+                  top: 85%;
+                  left:10%;
+                  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+                  text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    
+   }
+   
+   .button2 {
+    background-color:  #f39121;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align:center;
+    text-decoration: none;
+    text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transform:translate(30px) scale(0.9);
+    animation-name: example;
+    animation-duration: 4s;
+    animation-delay: 1.5s;
+    animation-iteration-count: 3;
+    position: absolute;
+    top: 85%;
+    left:80%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+   }
+   
+   .box
+   {
+   background-color: #f39121;
+   border: none;
+   color: rgb(0, 0, 0);
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+   margin: 4px 2px;
+   cursor: pointer;
+   border-radius: 8px;
+   transform:translate(30px);
+   width: 70px;
+   height: 70px;
+   position: absolute;
+   top: 5;
+   left: 0;
+   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+   animation-name: example1;
+   animation-duration: 4s;
+   animation-iteration-count: 3;
+   }
+   
+   .button1:hover{
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+      font-weight: bolder;
+      font-size: 20px;
+   }
+   
+   .button2:hover{
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+      font-weight: bolder;
+      font-size: 20px;
+   
+   }
+   
+   .box .comment {
+    display: none;
+   }
+   .box:hover .replies {
+    display: none;
+    
+   }
+   
+   .box:hover .comment {
+      display: inline;
+   }
+   .box:hover{
+      height: 80px;
+      width:80px;
+      padding-top: 10px;
+      color: rgb(0, 0, 0);
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 16px;
+   }
+   .container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+   }
+   
+   .image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 100%;
+    height: auto;
+   }
+   
+   .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 120%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.5);
+   }
+   
+   .container:hover img {
+    transform: scaleY(1.2); /* modify the scale property to enlarge the image */
+   }
+   
+   
+   .container:hover .overlay {
+    opacity: 1; /* change the opacity value to fade in the overlay */
+   }
+   
+   .text {
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+   }
+   .bubbles img{
+      width: 50px;
+      animation: bubble 7s linear infinite;
+   }
+   .bubbles{
+   width:100%;
+   display:flex;
+   align-items: center;
+   justify-content: space-around;
+   position: absolute;
+   bottom: -70px;
+   }
+   @keyframes bubble {
+      0%{
+          transform: translateY(0);
+           opacity: 0;
+   
+      }
+      50%{
+          
+           opacity: 1;
+           
+      }
+      70%{
+          
+           opacity: 1;
+           
+      }
+      100%{
+          transform: translateY(-80vh);
+           opacity: 0;
+           
+      }
+   }
+   .bubbles img:nth-child(1){
+       animation-delay: 2s;
+       width: 25px;
+   }
+   .bubbles img:nth-child(2){
+      animation-delay: 1s;
+      width: 30px;;
+   }
+   .bubbles img:nth-child(3){
+      width: 25px;
+      animation-delay: 3s;
+   }
+   .bubbles img:nth-child(4){
+    width: 30px;
+      animation-delay: 4.5s;
+   }
+   .bubbles img:nth-child(5){
+   
+      animation-delay: 3s;
+   }
+   .bubbles img:nth-child(6){
+      width:20px ;
+      animation-delay: 6s;
+   }
+   .bubbles img:nth-child(7){
+      width: 35px;
+      animation-delay: 7s;
+   }
+   
+  
