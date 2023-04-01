@@ -63,17 +63,17 @@ def gen():
             frame = cv2.rectangle(frame, (270,1), (350,65), (0,255,0), 2)
             frame = cv2.rectangle(frame, (360,1), (440,65), (0,0,255), 2)
             frame = cv2.rectangle(frame, (450,1), (540,65), (0,255,255), 2)
-            frame = cv2.rectangle(frame, (550,1), (630,65), (0,255,255), 2)
+            frame = cv2.rectangle(frame, (550,1), (630,65), (0,125,255), 2)
 
             
             
-            cv2.putText(frame, "SAVE", (29, 33), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255,255, 255,.9), 2, cv2.LINE_AA)
-            cv2.putText(frame, "CLEAR", (90, 33), cv2.FONT_HERSHEY_SIMPLEX, 0.5,(255,255, 255,.9), 2, cv2.LINE_AA)
-            cv2.putText(frame, "BLUE", (189, 33), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255,255, 255,.9), 2, cv2.LINE_AA)
-            cv2.putText(frame, "GREEN", (279, 33), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255,255, 255,.9), 2, cv2.LINE_AA)
-            cv2.putText(frame, "RED", (369, 33), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255,255, 255,.9), 2, cv2.LINE_AA)
-            cv2.putText(frame, "YELLOW", (459, 33), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255,255, 255,.9), 2, cv2.LINE_AA)
-            cv2.putText(frame, "BREAK", (559, 33), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255,255, 255,.9), 2, cv2.LINE_AA)
+            cv2.putText(frame, "SAVE", (29, 33), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255,0, 255,.9), 2, cv2.LINE_AA)
+            cv2.putText(frame, "CLEAR", (90, 33), cv2.FONT_HERSHEY_SIMPLEX, 0.5,(0,0, 0,.9), 2, cv2.LINE_AA)
+            cv2.putText(frame, "BLUE", (189, 33), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0,0, 0,.9), 2, cv2.LINE_AA)
+            cv2.putText(frame, "GREEN", (279, 33), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0,0, 0,.9), 2, cv2.LINE_AA)
+            cv2.putText(frame, "RED", (369, 33), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0,0, 0,.9), 2, cv2.LINE_AA)
+            cv2.putText(frame, "YELLOW", (459, 33), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0,0, 0,.9), 2, cv2.LINE_AA)
+            cv2.putText(frame, "BREAK", (559, 33), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0,125, 255,.9), 2, cv2.LINE_AA)
 
 
             #frame = cv2.cvtColor(hsv, cv2.COLOR_HSV2BGR)
@@ -178,6 +178,12 @@ def gen():
                             sd.wait()
                     elif 550<=center[0]<=630:
                          colorIndex=4 
+                         mytext6="break"
+                         output6= gTTS(text=mytext6, lang = language, slow=False)
+                         output6.save("output6.mp3")
+                         data, fs = sf.read("output6.mp3")
+                         sd.play(data, fs)
+                         sd.wait()
                          break
                 else :
                     if colorIndex == 0:
@@ -219,7 +225,7 @@ def gen():
             _,buffer=cv2.imencode('.jpg',frame)
             frame=buffer.tobytes()
             #cv2.imwrite('./akas.jpg',paintWindow)
-            cv2.imwrite('./frontend/src/assests/images/img0.jpg',paintWindow)
+            cv2.imwrite('./frontend/src/assests/img0.jpg',paintWindow)
             # yield(b'--paint\r\n'b'continue')
             yield(b'--frame\r\n 'b'Content-Type:image/jpeg\r\n\r\n'+frame+b'\r\n')
             # frame=bytes('static/images/img0.jpg','utf-8')
