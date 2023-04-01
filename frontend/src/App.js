@@ -1,30 +1,51 @@
 import './assests/style.css';
 import Bubble from './assests/images/bubble.png';
-import Deer from './assests/images/deer.jpg'
+// import Deer from './assests/images/deer.jpg'
 import React from 'react'
+import videomp4 from './assests/video/home-video.mp4'
+import videoOgv from './assests/video/home-video.ogv'
+import videowebm from './assests/video/videos_home-video.webm'
+
 import { useNavigate } from "react-router-dom";
 // import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   const navigate = useNavigate();
  return (
-  <header className="relative flex items-center justify-center h-screen mb-12 overflow-hidden" >
-  <div name='home' className='w-full h-screen z-50'>
+  <header className="relative flex items-center justify-center h-screen mb-12" >
+  <div className='absolute w-full flex items-center justify-center   z-50'>
     {/* Container */}
-    <div   className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
-      <div className='flex justify-between items-center mx-10'>
-      <button onClick={() => navigate('/files')}  type="button" class="text-[#ffae2c] hover:text-white border border-yellow-400 hover:bg-[#ffae2c] focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-yellow-300 dark:text-yellow-300 dark:hover:text-black dark:hover:bg-[#ffae2c] dark:focus:ring-yellow-900">
-      Click here to view saved images
+    <div className='max-w-[1000px] mx-auto px-8 flex flex-col items-center justify-center h-screen'>
+            <h1 className='text-4xl sm:text-7xl font-bold text-[#ffae2c]'>
+              HELLO WORLD
+            </h1>
+            <p className='text-[#8892b0] py-4 max-w-[700px]'>
+            I'am AI-powered writing assistant that helps users improve their documents with suggestions and corrections. It is useful for a range of writing tasks and includes features for programmers and developers. It is available on WhatsApp and the web.
+            </p>
+      <div className='flex items-center mx-10 '>
+        <button onClick={() => navigate('/camera')}  className="relative inline-flex mr-10  items-center justify-center p-0.5 mb-2  overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
+          <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+              Get started
+          </span>
         </button>
-        <button onClick={() => navigate('/camera')}  type="button" class="text-[#ffae2c] hover:text-white border border-yellow-400 hover:bg-[#ffae2c] focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-yellow-300 dark:text-yellow-300 dark:hover:text-black dark:hover:bg-[#ffae2c] dark:focus:ring-yellow-900">
-          Get Started
+        <button onClick={() => navigate('/files')}  className="relative inline-flex items-center justify-center p-0.5 mb-2  overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
+          <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+          Click here to view saved images
+          </span>
         </button>
       </div>
     </div>
   </div>
-  <img className="absolute -z-2 w-auto min-w-full min-h-full max-w-none" src={Deer} alt={Deer} />
+  {/* <img className="absolute -z-2 w-auto min-w-full min-h-full max-w-none" src={Deer} alt={Deer} /> */}
+
+  <video autoPlay loop muted className="absolute -z-2 w-auto min-w-full min-h-screen max-w-none">
+    <source src={videomp4} type="video/mp4" />
+    <source src={videoOgv} type="video/ogv" />
+    <source src={videowebm} type="video/webm" />
+    Your browser does not support the video tag.
+    </video>
 
 
-<div className='bg-[rgba(0,0,0,0.5)] w-[100%] h-[100vh] fixed -z-1'>
+<div className='bg-[rgba(0,0,0,0.8)] w-[100%] h-screen fixed -z-1'>
 </div>
 
 <div className='bubbles'>
