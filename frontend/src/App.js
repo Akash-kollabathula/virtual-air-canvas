@@ -16,10 +16,10 @@ function App() {
     {/* Container */}
     <div className='max-w-[1000px] mx-auto px-8 flex flex-col items-center justify-center h-screen'>
             <h1 className='text-4xl sm:text-7xl font-bold text-[#ffae2c]'>
-              HELLO WORLD
+              Virtual Air Canvas
             </h1>
             <p className='text-[#8892b0] py-4 max-w-[700px]'>
-            I'am AI-powered writing assistant that helps users improve their documents with suggestions and corrections. It is useful for a range of writing tasks and includes features for programmers and developers. It is available on WhatsApp and the web.
+            Writing in air has been one of the most fascinating and challenging research areas in field of image processing and pattern recognition in the recent years. It contributes immensely to the advancement of an automation process and can improve the interface between man and machine in numerous applications.
             </p>
       <div className='flex items-center mx-10 '>
         <button onClick={() => navigate('/camera')}  className="relative inline-flex mr-10  items-center justify-center p-0.5 mb-2  overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
